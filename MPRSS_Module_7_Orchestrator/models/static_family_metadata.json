@@ -1,0 +1,856 @@
+{
+  "feature_columns": [
+    "transact",
+    "onServiceConnected",
+    "bindService",
+    "attachInterface",
+    "ServiceConnection",
+    "android.os.Binder",
+    "SEND_SMS",
+    "Ljava.lang.Class.getCanonicalName",
+    "Ljava.lang.Class.getMethods",
+    "Ljava.lang.Class.cast",
+    "Ljava.net.URLDecoder",
+    "android.content.pm.Signature",
+    "android.telephony.SmsManager",
+    "READ_PHONE_STATE",
+    "getBinder",
+    "ClassLoader",
+    "Landroid.content.Context.registerReceiver",
+    "Ljava.lang.Class.getField",
+    "Landroid.content.Context.unregisterReceiver",
+    "GET_ACCOUNTS",
+    "RECEIVE_SMS",
+    "Ljava.lang.Class.getDeclaredField",
+    "READ_SMS",
+    "getCallingUid",
+    "Ljavax.crypto.spec.SecretKeySpec",
+    "android.intent.action.BOOT_COMPLETED",
+    "USE_CREDENTIALS",
+    "MANAGE_ACCOUNTS",
+    "android.content.pm.PackageInfo",
+    "KeySpec",
+    "TelephonyManager.getLine1Number",
+    "DexClassLoader",
+    "HttpGet.init",
+    "SecretKey",
+    "Ljava.lang.Class.getMethod",
+    "System.loadLibrary",
+    "android.intent.action.SEND",
+    "Ljavax.crypto.Cipher",
+    "WRITE_SMS",
+    "READ_SYNC_SETTINGS",
+    "AUTHENTICATE_ACCOUNTS",
+    "android.telephony.gsm.SmsManager",
+    "WRITE_HISTORY_BOOKMARKS",
+    "TelephonyManager.getSubscriberId",
+    "mount",
+    "INSTALL_PACKAGES",
+    "Runtime.getRuntime",
+    "CAMERA",
+    "Ljava.lang.Object.getClass",
+    "WRITE_SYNC_SETTINGS",
+    "READ_HISTORY_BOOKMARKS",
+    "Ljava.lang.Class.forName",
+    "INTERNET",
+    "android.intent.action.PACKAGE_REPLACED",
+    "Binder",
+    "android.intent.action.SEND_MULTIPLE",
+    "RECORD_AUDIO",
+    "IBinder",
+    "android.os.IBinder",
+    "createSubprocess",
+    "NFC",
+    "ACCESS_LOCATION_EXTRA_COMMANDS",
+    "URLClassLoader",
+    "WRITE_APN_SETTINGS",
+    "abortBroadcast",
+    "BIND_REMOTEVIEWS",
+    "android.intent.action.TIME_SET",
+    "READ_PROFILE",
+    "TelephonyManager.getDeviceId",
+    "MODIFY_AUDIO_SETTINGS",
+    "getCallingPid",
+    "READ_SYNC_STATS",
+    "BROADCAST_STICKY",
+    "android.intent.action.PACKAGE_REMOVED",
+    "android.intent.action.TIMEZONE_CHANGED",
+    "WAKE_LOCK",
+    "RECEIVE_BOOT_COMPLETED",
+    "RESTART_PACKAGES",
+    "Ljava.lang.Class.getPackage",
+    "chmod",
+    "Ljava.lang.Class.getDeclaredClasses",
+    "android.intent.action.ACTION_POWER_DISCONNECTED",
+    "android.intent.action.PACKAGE_ADDED",
+    "PathClassLoader",
+    "TelephonyManager.getSimSerialNumber",
+    "Runtime.load",
+    "TelephonyManager.getCallState",
+    "BLUETOOTH",
+    "READ_CALENDAR",
+    "READ_CALL_LOG",
+    "SUBSCRIBED_FEEDS_WRITE",
+    "READ_EXTERNAL_STORAGE",
+    "TelephonyManager.getSimCountryIso",
+    "sendMultipartTextMessage",
+    "PackageInstaller",
+    "VIBRATE",
+    "remount",
+    "android.intent.action.ACTION_SHUTDOWN",
+    "sendDataMessage",
+    "ACCESS_NETWORK_STATE",
+    "chown",
+    "HttpPost.init",
+    "Ljava.lang.Class.getClasses",
+    "SUBSCRIBED_FEEDS_READ",
+    "TelephonyManager.isNetworkRoaming",
+    "CHANGE_WIFI_MULTICAST_STATE",
+    "WRITE_CALENDAR",
+    "android.intent.action.PACKAGE_DATA_CLEARED",
+    "MASTER_CLEAR",
+    "HttpUriRequest",
+    "UPDATE_DEVICE_STATS",
+    "WRITE_CALL_LOG",
+    "DELETE_PACKAGES",
+    "GET_TASKS",
+    "GLOBAL_SEARCH",
+    "DELETE_CACHE_FILES",
+    "WRITE_USER_DICTIONARY",
+    "android.intent.action.PACKAGE_CHANGED",
+    "android.intent.action.NEW_OUTGOING_CALL",
+    "REORDER_TASKS",
+    "WRITE_PROFILE",
+    "SET_WALLPAPER",
+    "BIND_INPUT_METHOD",
+    "divideMessage",
+    "READ_SOCIAL_STREAM",
+    "READ_USER_DICTIONARY",
+    "PROCESS_OUTGOING_CALLS",
+    "CALL_PRIVILEGED",
+    "Runtime.exec",
+    "BIND_WALLPAPER",
+    "RECEIVE_WAP_PUSH",
+    "DUMP",
+    "BATTERY_STATS",
+    "ACCESS_COARSE_LOCATION",
+    "SET_TIME",
+    "android.intent.action.SENDTO",
+    "WRITE_SOCIAL_STREAM",
+    "WRITE_SETTINGS",
+    "REBOOT",
+    "BLUETOOTH_ADMIN",
+    "TelephonyManager.getNetworkOperator",
+    "/system/bin",
+    "MessengerService",
+    "BIND_DEVICE_ADMIN",
+    "WRITE_GSERVICES",
+    "IRemoteService",
+    "KILL_BACKGROUND_PROCESSES",
+    "SET_ALARM",
+    "ACCOUNT_MANAGER",
+    "/system/app",
+    "android.intent.action.CALL",
+    "STATUS_BAR",
+    "TelephonyManager.getSimOperator",
+    "PERSISTENT_ACTIVITY",
+    "CHANGE_NETWORK_STATE",
+    "onBind",
+    "Process.start",
+    "android.intent.action.SCREEN_ON",
+    "Context.bindService",
+    "RECEIVE_MMS",
+    "SET_TIME_ZONE",
+    "android.intent.action.BATTERY_OKAY",
+    "CONTROL_LOCATION_UPDATES",
+    "BROADCAST_WAP_PUSH",
+    "BIND_ACCESSIBILITY_SERVICE",
+    "ADD_VOICEMAIL",
+    "CALL_PHONE",
+    "ProcessBuilder",
+    "BIND_APPWIDGET",
+    "FLASHLIGHT",
+    "READ_LOGS",
+    "Ljava.lang.Class.getResource",
+    "defineClass",
+    "SET_PROCESS_LIMIT",
+    "android.intent.action.PACKAGE_RESTARTED",
+    "MOUNT_UNMOUNT_FILESYSTEMS",
+    "BIND_TEXT_SERVICE",
+    "INSTALL_LOCATION_PROVIDER",
+    "android.intent.action.CALL_BUTTON",
+    "android.intent.action.SCREEN_OFF",
+    "findClass",
+    "SYSTEM_ALERT_WINDOW",
+    "MOUNT_FORMAT_FILESYSTEMS",
+    "CHANGE_CONFIGURATION",
+    "CLEAR_APP_USER_DATA",
+    "intent.action.RUN",
+    "android.intent.action.SET_WALLPAPER",
+    "CHANGE_WIFI_STATE",
+    "READ_FRAME_BUFFER",
+    "ACCESS_SURFACE_FLINGER",
+    "Runtime.loadLibrary",
+    "BROADCAST_SMS",
+    "EXPAND_STATUS_BAR",
+    "INTERNAL_SYSTEM_WINDOW",
+    "android.intent.action.BATTERY_LOW",
+    "SET_ACTIVITY_WATCHER",
+    "WRITE_CONTACTS",
+    "android.intent.action.ACTION_POWER_CONNECTED",
+    "BIND_VPN_SERVICE",
+    "DISABLE_KEYGUARD",
+    "ACCESS_MOCK_LOCATION",
+    "GET_PACKAGE_SIZE",
+    "MODIFY_PHONE_STATE",
+    "CHANGE_COMPONENT_ENABLED_STATE",
+    "CLEAR_APP_CACHE",
+    "SET_ORIENTATION",
+    "READ_CONTACTS",
+    "DEVICE_POWER",
+    "HARDWARE_TEST",
+    "ACCESS_WIFI_STATE",
+    "WRITE_EXTERNAL_STORAGE",
+    "ACCESS_FINE_LOCATION",
+    "SET_WALLPAPER_HINTS",
+    "SET_PREFERRED_APPLICATIONS",
+    "WRITE_SECURE_SETTINGS"
+  ],
+  "best_k_by_silhouette_max": 19,
+  "k_used_for_final_model": 7,
+  "k_selection_results": [
+    {
+      "k": 2,
+      "inertia": 68517.74666926329,
+      "silhouette": 0.15665114814175965
+    },
+    {
+      "k": 3,
+      "inertia": 63299.35846523031,
+      "silhouette": 0.1598279110830443
+    },
+    {
+      "k": 4,
+      "inertia": 58234.76424183486,
+      "silhouette": 0.16420190121469413
+    },
+    {
+      "k": 5,
+      "inertia": 54650.70369045396,
+      "silhouette": 0.16042921038379448
+    },
+    {
+      "k": 6,
+      "inertia": 52410.60149500039,
+      "silhouette": 0.17657300026509332
+    },
+    {
+      "k": 7,
+      "inertia": 50223.768394122424,
+      "silhouette": 0.18275225675997994
+    },
+    {
+      "k": 8,
+      "inertia": 48179.8757543844,
+      "silhouette": 0.1676629079470095
+    },
+    {
+      "k": 9,
+      "inertia": 46769.50197194218,
+      "silhouette": 0.1749975715394856
+    },
+    {
+      "k": 10,
+      "inertia": 45225.85036111553,
+      "silhouette": 0.19674426560202637
+    },
+    {
+      "k": 11,
+      "inertia": 43626.443809982826,
+      "silhouette": 0.2087157568858108
+    },
+    {
+      "k": 12,
+      "inertia": 42087.889331363214,
+      "silhouette": 0.2174943827768913
+    },
+    {
+      "k": 13,
+      "inertia": 41168.85176795762,
+      "silhouette": 0.22578286460510194
+    },
+    {
+      "k": 14,
+      "inertia": 39954.13758608686,
+      "silhouette": 0.2374771418658991
+    },
+    {
+      "k": 15,
+      "inertia": 39265.30192853178,
+      "silhouette": 0.2419946235205432
+    },
+    {
+      "k": 16,
+      "inertia": 38493.731638167024,
+      "silhouette": 0.2269548756757835
+    },
+    {
+      "k": 17,
+      "inertia": 37147.415718839504,
+      "silhouette": 0.25805034634238183
+    },
+    {
+      "k": 18,
+      "inertia": 36040.250311987314,
+      "silhouette": 0.2513876495234423
+    },
+    {
+      "k": 19,
+      "inertia": 35957.04430164138,
+      "silhouette": 0.26880443810925997
+    },
+    {
+      "k": 20,
+      "inertia": 35071.49243154684,
+      "silhouette": 0.26530439625299346
+    }
+  ],
+  "pca_n_components": 66,
+  "pca_explained_variance": 0.9508,
+  "cluster_interpretations": {
+    "0": {
+      "cluster_size": 1561,
+      "cluster_pct": 28.08,
+      "top_distinguishing_features": [
+        {
+          "feature": "IBinder",
+          "cluster_mean": 0.1493,
+          "overall_mean": 0.6759,
+          "deviation": -0.5266,
+          "standardized_deviation": -1.1251
+        },
+        {
+          "feature": "android.os.IBinder",
+          "cluster_mean": 0.1493,
+          "overall_mean": 0.6759,
+          "deviation": -0.5266,
+          "standardized_deviation": -1.1251
+        },
+        {
+          "feature": "Binder",
+          "cluster_mean": 0.1525,
+          "overall_mean": 0.6781,
+          "deviation": -0.5256,
+          "standardized_deviation": -1.1248
+        },
+        {
+          "feature": "TelephonyManager.getDeviceId",
+          "cluster_mean": 0.1262,
+          "overall_mean": 0.6558,
+          "deviation": -0.5296,
+          "standardized_deviation": -1.1145
+        },
+        {
+          "feature": "onBind",
+          "cluster_mean": 0.1435,
+          "overall_mean": 0.6556,
+          "deviation": -0.5121,
+          "standardized_deviation": -1.0776
+        },
+        {
+          "feature": "RECEIVE_BOOT_COMPLETED",
+          "cluster_mean": 0.034,
+          "overall_mean": 0.4856,
+          "deviation": -0.4517,
+          "standardized_deviation": -0.9036
+        },
+        {
+          "feature": "android.intent.action.BOOT_COMPLETED",
+          "cluster_mean": 0.2633,
+          "overall_mean": 0.6529,
+          "deviation": -0.3896,
+          "standardized_deviation": -0.8183
+        },
+        {
+          "feature": "ACCESS_NETWORK_STATE",
+          "cluster_mean": 0.2761,
+          "overall_mean": 0.6619,
+          "deviation": -0.3858,
+          "standardized_deviation": -0.8154
+        },
+        {
+          "feature": "Ljava.lang.Object.getClass",
+          "cluster_mean": 0.1992,
+          "overall_mean": 0.5932,
+          "deviation": -0.3939,
+          "standardized_deviation": -0.8018
+        },
+        {
+          "feature": "mount",
+          "cluster_mean": 0.0865,
+          "overall_mean": 0.4477,
+          "deviation": -0.3612,
+          "standardized_deviation": -0.7263
+        }
+      ]
+    },
+    "1": {
+      "cluster_size": 1468,
+      "cluster_pct": 26.4,
+      "top_distinguishing_features": [
+        {
+          "feature": "IBinder",
+          "cluster_mean": 0.9898,
+          "overall_mean": 0.6759,
+          "deviation": 0.3139,
+          "standardized_deviation": 0.6706
+        },
+        {
+          "feature": "android.os.IBinder",
+          "cluster_mean": 0.9898,
+          "overall_mean": 0.6759,
+          "deviation": 0.3139,
+          "standardized_deviation": 0.6706
+        },
+        {
+          "feature": "Binder",
+          "cluster_mean": 0.9898,
+          "overall_mean": 0.6781,
+          "deviation": 0.3117,
+          "standardized_deviation": 0.6671
+        },
+        {
+          "feature": "onBind",
+          "cluster_mean": 0.9639,
+          "overall_mean": 0.6556,
+          "deviation": 0.3083,
+          "standardized_deviation": 0.6488
+        },
+        {
+          "feature": "SEND_SMS",
+          "cluster_mean": 0.8495,
+          "overall_mean": 0.5394,
+          "deviation": 0.3101,
+          "standardized_deviation": 0.622
+        },
+        {
+          "feature": "HttpUriRequest",
+          "cluster_mean": 0.3025,
+          "overall_mean": 0.5865,
+          "deviation": -0.2841,
+          "standardized_deviation": -0.5768
+        },
+        {
+          "feature": "SET_ALARM",
+          "cluster_mean": 0.139,
+          "overall_mean": 0.0372,
+          "deviation": 0.1017,
+          "standardized_deviation": 0.5373
+        },
+        {
+          "feature": "HttpPost.init",
+          "cluster_mean": 0.2418,
+          "overall_mean": 0.5002,
+          "deviation": -0.2584,
+          "standardized_deviation": -0.5167
+        },
+        {
+          "feature": "RECEIVE_SMS",
+          "cluster_mean": 0.6328,
+          "overall_mean": 0.3847,
+          "deviation": 0.2481,
+          "standardized_deviation": 0.5099
+        },
+        {
+          "feature": "INSTALL_PACKAGES",
+          "cluster_mean": 0.3263,
+          "overall_mean": 0.1484,
+          "deviation": 0.1779,
+          "standardized_deviation": 0.5004
+        }
+      ]
+    },
+    "2": {
+      "cluster_size": 488,
+      "cluster_pct": 8.78,
+      "top_distinguishing_features": [
+        {
+          "feature": "/system/app",
+          "cluster_mean": 0.9344,
+          "overall_mean": 0.1275,
+          "deviation": 0.8069,
+          "standardized_deviation": 2.4189
+        },
+        {
+          "feature": "/system/bin",
+          "cluster_mean": 0.998,
+          "overall_mean": 0.1716,
+          "deviation": 0.8264,
+          "standardized_deviation": 2.1917
+        },
+        {
+          "feature": "chmod",
+          "cluster_mean": 0.9836,
+          "overall_mean": 0.1732,
+          "deviation": 0.8104,
+          "standardized_deviation": 2.1413
+        },
+        {
+          "feature": "CHANGE_WIFI_STATE",
+          "cluster_mean": 0.9672,
+          "overall_mean": 0.1772,
+          "deviation": 0.7901,
+          "standardized_deviation": 2.0691
+        },
+        {
+          "feature": "System.loadLibrary",
+          "cluster_mean": 0.9939,
+          "overall_mean": 0.1926,
+          "deviation": 0.8012,
+          "standardized_deviation": 2.0315
+        },
+        {
+          "feature": "Ljavax.crypto.spec.SecretKeySpec",
+          "cluster_mean": 0.998,
+          "overall_mean": 0.221,
+          "deviation": 0.7769,
+          "standardized_deviation": 1.8721
+        },
+        {
+          "feature": "READ_EXTERNAL_STORAGE",
+          "cluster_mean": 0.4631,
+          "overall_mean": 0.0601,
+          "deviation": 0.403,
+          "standardized_deviation": 1.696
+        },
+        {
+          "feature": "Ljavax.crypto.Cipher",
+          "cluster_mean": 0.998,
+          "overall_mean": 0.264,
+          "deviation": 0.7339,
+          "standardized_deviation": 1.6648
+        },
+        {
+          "feature": "Runtime.exec",
+          "cluster_mean": 0.9877,
+          "overall_mean": 0.2656,
+          "deviation": 0.7221,
+          "standardized_deviation": 1.6347
+        },
+        {
+          "feature": "SecretKey",
+          "cluster_mean": 0.998,
+          "overall_mean": 0.2736,
+          "deviation": 0.7244,
+          "standardized_deviation": 1.6248
+        }
+      ]
+    },
+    "3": {
+      "cluster_size": 675,
+      "cluster_pct": 12.14,
+      "top_distinguishing_features": [
+        {
+          "feature": "findClass",
+          "cluster_mean": 0.8696,
+          "overall_mean": 0.1106,
+          "deviation": 0.759,
+          "standardized_deviation": 2.4197
+        },
+        {
+          "feature": "WRITE_HISTORY_BOOKMARKS",
+          "cluster_mean": 0.9422,
+          "overall_mean": 0.1647,
+          "deviation": 0.7775,
+          "standardized_deviation": 2.0957
+        },
+        {
+          "feature": "READ_HISTORY_BOOKMARKS",
+          "cluster_mean": 0.9407,
+          "overall_mean": 0.1804,
+          "deviation": 0.7603,
+          "standardized_deviation": 1.9772
+        },
+        {
+          "feature": "Ljava.lang.Class.getPackage",
+          "cluster_mean": 0.8696,
+          "overall_mean": 0.1558,
+          "deviation": 0.7139,
+          "standardized_deviation": 1.9685
+        },
+        {
+          "feature": "ClassLoader",
+          "cluster_mean": 0.9822,
+          "overall_mean": 0.2577,
+          "deviation": 0.7245,
+          "standardized_deviation": 1.6563
+        },
+        {
+          "feature": "Ljava.lang.Class.getDeclaredField",
+          "cluster_mean": 0.8919,
+          "overall_mean": 0.2372,
+          "deviation": 0.6546,
+          "standardized_deviation": 1.5388
+        },
+        {
+          "feature": "ACCESS_LOCATION_EXTRA_COMMANDS",
+          "cluster_mean": 0.483,
+          "overall_mean": 0.1088,
+          "deviation": 0.3742,
+          "standardized_deviation": 1.2014
+        },
+        {
+          "feature": "Ljava.lang.Class.getResource",
+          "cluster_mean": 0.9778,
+          "overall_mean": 0.4117,
+          "deviation": 0.5661,
+          "standardized_deviation": 1.1502
+        },
+        {
+          "feature": "BIND_WALLPAPER",
+          "cluster_mean": 0.2815,
+          "overall_mean": 0.0491,
+          "deviation": 0.2324,
+          "standardized_deviation": 1.0754
+        },
+        {
+          "feature": "Ljava.lang.Class.forName",
+          "cluster_mean": 0.9985,
+          "overall_mean": 0.4784,
+          "deviation": 0.5201,
+          "standardized_deviation": 1.0411
+        }
+      ]
+    },
+    "4": {
+      "cluster_size": 903,
+      "cluster_pct": 16.24,
+      "top_distinguishing_features": [
+        {
+          "feature": "TelephonyManager.getSimSerialNumber",
+          "cluster_mean": 0.6146,
+          "overall_mean": 0.1874,
+          "deviation": 0.4272,
+          "standardized_deviation": 1.0946
+        },
+        {
+          "feature": "onServiceConnected",
+          "cluster_mean": 0.371,
+          "overall_mean": 0.0824,
+          "deviation": 0.2886,
+          "standardized_deviation": 1.0497
+        },
+        {
+          "feature": "ServiceConnection",
+          "cluster_mean": 0.371,
+          "overall_mean": 0.0831,
+          "deviation": 0.2879,
+          "standardized_deviation": 1.0429
+        },
+        {
+          "feature": "bindService",
+          "cluster_mean": 0.3621,
+          "overall_mean": 0.0802,
+          "deviation": 0.2819,
+          "standardized_deviation": 1.0378
+        },
+        {
+          "feature": "TelephonyManager.getSubscriberId",
+          "cluster_mean": 0.8272,
+          "overall_mean": 0.3442,
+          "deviation": 0.483,
+          "standardized_deviation": 1.0165
+        },
+        {
+          "feature": "Runtime.getRuntime",
+          "cluster_mean": 0.7121,
+          "overall_mean": 0.2906,
+          "deviation": 0.4214,
+          "standardized_deviation": 0.928
+        },
+        {
+          "feature": "Runtime.exec",
+          "cluster_mean": 0.6755,
+          "overall_mean": 0.2656,
+          "deviation": 0.4099,
+          "standardized_deviation": 0.9279
+        },
+        {
+          "feature": "SEND_SMS",
+          "cluster_mean": 0.0919,
+          "overall_mean": 0.5394,
+          "deviation": -0.4475,
+          "standardized_deviation": -0.8977
+        },
+        {
+          "feature": "KeySpec",
+          "cluster_mean": 0.6512,
+          "overall_mean": 0.2773,
+          "deviation": 0.3738,
+          "standardized_deviation": 0.8349
+        },
+        {
+          "feature": "SecretKey",
+          "cluster_mean": 0.6412,
+          "overall_mean": 0.2736,
+          "deviation": 0.3676,
+          "standardized_deviation": 0.8246
+        }
+      ]
+    },
+    "5": {
+      "cluster_size": 184,
+      "cluster_pct": 3.31,
+      "top_distinguishing_features": [
+        {
+          "feature": "BLUETOOTH_ADMIN",
+          "cluster_mean": 0.7337,
+          "overall_mean": 0.0333,
+          "deviation": 0.7004,
+          "standardized_deviation": 3.905
+        },
+        {
+          "feature": "BLUETOOTH",
+          "cluster_mean": 0.7391,
+          "overall_mean": 0.0372,
+          "deviation": 0.7019,
+          "standardized_deviation": 3.707
+        },
+        {
+          "feature": "CLEAR_APP_CACHE",
+          "cluster_mean": 0.3913,
+          "overall_mean": 0.0146,
+          "deviation": 0.3767,
+          "standardized_deviation": 3.144
+        },
+        {
+          "feature": "GET_PACKAGE_SIZE",
+          "cluster_mean": 0.3913,
+          "overall_mean": 0.0173,
+          "deviation": 0.374,
+          "standardized_deviation": 2.8712
+        },
+        {
+          "feature": "KILL_BACKGROUND_PROCESSES",
+          "cluster_mean": 0.4783,
+          "overall_mean": 0.0264,
+          "deviation": 0.4518,
+          "standardized_deviation": 2.816
+        },
+        {
+          "feature": "WRITE_SETTINGS",
+          "cluster_mean": 0.8967,
+          "overall_mean": 0.1236,
+          "deviation": 0.7732,
+          "standardized_deviation": 2.3493
+        },
+        {
+          "feature": "Ljava.lang.Class.getCanonicalName",
+          "cluster_mean": 0.5217,
+          "overall_mean": 0.0435,
+          "deviation": 0.4782,
+          "standardized_deviation": 2.3436
+        },
+        {
+          "feature": "DISABLE_KEYGUARD",
+          "cluster_mean": 0.7065,
+          "overall_mean": 0.0844,
+          "deviation": 0.6222,
+          "standardized_deviation": 2.2385
+        },
+        {
+          "feature": "RESTART_PACKAGES",
+          "cluster_mean": 0.8913,
+          "overall_mean": 0.1354,
+          "deviation": 0.7559,
+          "standardized_deviation": 2.2088
+        },
+        {
+          "feature": "attachInterface",
+          "cluster_mean": 0.5598,
+          "overall_mean": 0.0586,
+          "deviation": 0.5011,
+          "standardized_deviation": 2.1329
+        }
+      ]
+    },
+    "6": {
+      "cluster_size": 281,
+      "cluster_pct": 5.05,
+      "top_distinguishing_features": [
+        {
+          "feature": "android.intent.action.ACTION_POWER_CONNECTED",
+          "cluster_mean": 0.9893,
+          "overall_mean": 0.0531,
+          "deviation": 0.9363,
+          "standardized_deviation": 4.1766
+        },
+        {
+          "feature": "createSubprocess",
+          "cluster_mean": 0.8327,
+          "overall_mean": 0.0552,
+          "deviation": 0.7775,
+          "standardized_deviation": 3.4039
+        },
+        {
+          "feature": "DexClassLoader",
+          "cluster_mean": 0.8292,
+          "overall_mean": 0.0568,
+          "deviation": 0.7723,
+          "standardized_deviation": 3.3356
+        },
+        {
+          "feature": "android.content.pm.Signature",
+          "cluster_mean": 0.9786,
+          "overall_mean": 0.0836,
+          "deviation": 0.895,
+          "standardized_deviation": 3.2327
+        },
+        {
+          "feature": "WRITE_CONTACTS",
+          "cluster_mean": 1.0,
+          "overall_mean": 0.0975,
+          "deviation": 0.9025,
+          "standardized_deviation": 3.0425
+        },
+        {
+          "feature": "DISABLE_KEYGUARD",
+          "cluster_mean": 0.8541,
+          "overall_mean": 0.0844,
+          "deviation": 0.7697,
+          "standardized_deviation": 2.7694
+        },
+        {
+          "feature": "WRITE_APN_SETTINGS",
+          "cluster_mean": 0.8434,
+          "overall_mean": 0.1013,
+          "deviation": 0.7422,
+          "standardized_deviation": 2.4599
+        },
+        {
+          "feature": "CALL_PHONE",
+          "cluster_mean": 0.8541,
+          "overall_mean": 0.1322,
+          "deviation": 0.7219,
+          "standardized_deviation": 2.1312
+        },
+        {
+          "feature": "RESTART_PACKAGES",
+          "cluster_mean": 0.8434,
+          "overall_mean": 0.1354,
+          "deviation": 0.708,
+          "standardized_deviation": 2.0688
+        },
+        {
+          "feature": "READ_LOGS",
+          "cluster_mean": 0.6833,
+          "overall_mean": 0.0933,
+          "deviation": 0.5899,
+          "standardized_deviation": 2.0277
+        }
+      ]
+    }
+  },
+  "trained_at": "2026-09-18T14:12:44.551144",
+  "note": "Cluster labels are INTERPRETATIONS based on distinguishing static features, not verified ground-truth family names - no labeled family dataset was available for this project. k_used_for_final_model may differ from best_k_by_silhouette_max: silhouette score did not converge to a clear global maximum within the tested range (consistent with high-dimensional sparse feature spaces), so a strong LOCAL peak (k=7) was chosen manually instead of the global argmax, for interpretability."
+}

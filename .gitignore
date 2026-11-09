@@ -1,0 +1,53 @@
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# Node modules
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Datasets
+datasets/
+dataset/
+data/
+Data/
+raw_data/
+processed_data/
+training_data/
+test_data/
+
+# Dataset files
+*.csv
+*.tsv
+*.parquet
+*.xlsx
+*.xls
+*.jsonl
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Cache
+.cache/

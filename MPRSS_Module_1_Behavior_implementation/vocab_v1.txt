@@ -1,0 +1,72 @@
+# Module 1 vocabulary v1  (one API per line: package.Class.method; '#' lines are comments)
+#
+# Chosen by MEANING (security-relevant, hookable with Frida, not called constantly by Android
+# itself), then checked against sensitive_api_report.py. Edit freely: build_dataset.py reads
+# this file. Left OUT on purpose:
+#   - HOT APIs (FileOutputStream.write, File.<init>, Parcel.*): too many calls, costly to hook
+#   - SMS / getDeviceId / getSubscriberId / Camera / Location: almost never appear in the
+#     training traces (<2% of apps), so a model cannot learn them. Frida still logs them and the
+#     dashboard shows them as raw alerts.
+
+# --- telephony / device info
+android.telephony.TelephonyManager.getNetworkOperator
+android.telephony.TelephonyManager.getSimOperator
+android.telephony.TelephonyManager.getSimCountryIso
+android.telephony.TelephonyManager.getNetworkCountryIso
+android.telephony.TelephonyManager.listen
+
+# --- network
+android.net.ConnectivityManager.getActiveNetworkInfo
+android.net.ConnectivityManager.getNetworkInfo
+java.net.URL.<init>
+java.net.URL.getHost
+java.net.URL.openConnection
+java.net.URLConnection.setRequestProperty
+java.net.HttpURLConnection.setRequestMethod
+
+# --- process execution
+java.lang.Runtime.exec
+
+# --- dynamic loading / reflection
+java.lang.reflect.AccessibleObject.setAccessible
+java.lang.reflect.Field.get
+java.lang.Class.forName
+java.lang.Class.getMethod
+java.lang.ClassLoader.loadClass
+
+# --- crypto / encoding
+javax.crypto.Cipher.getInstance
+javax.crypto.Cipher.doFinal
+javax.crypto.spec.SecretKeySpec.<init>
+java.security.MessageDigest.getInstance
+android.util.Base64.decode
+
+# --- package / system info
+android.content.pm.PackageManager.getPackageInfo
+android.content.pm.PackageManager.getApplicationInfo
+android.content.pm.PackageManager.hasSystemFeature
+android.content.pm.PackageManager.getActivityInfo
+android.content.pm.PackageManager.checkPermission
+android.content.pm.PackageManager.resolveActivity
+android.content.pm.PackageManager.getInstallerPackageName
+android.provider.Settings$Secure.getString
+
+# --- files
+java.io.File.exists
+java.io.File.mkdir
+java.io.File.delete
+java.io.File.getParentFile
+java.io.FileOutputStream.<init>
+java.io.FileInputStream.<init>
+android.os.Environment.getExternalStorageDirectory
+
+# --- components / broadcasts
+android.content.ContextWrapper.registerReceiver
+android.content.ContextWrapper.bindService
+android.content.ContextWrapper.startService
+
+# --- webview
+android.webkit.WebView.loadUrl
+android.webkit.WebSettings.setJavaScriptEnabled
+android.webkit.WebSettings.setAllowFileAccess
+android.webkit.WebView.setWebViewClient

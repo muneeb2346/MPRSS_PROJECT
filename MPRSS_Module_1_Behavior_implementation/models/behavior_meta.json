@@ -1,0 +1,84 @@
+{
+ "vocab": [
+  "android.telephony.TelephonyManager.getNetworkOperator",
+  "android.telephony.TelephonyManager.getSimOperator",
+  "android.telephony.TelephonyManager.getSimCountryIso",
+  "android.telephony.TelephonyManager.getNetworkCountryIso",
+  "android.telephony.TelephonyManager.listen",
+  "android.net.ConnectivityManager.getActiveNetworkInfo",
+  "android.net.ConnectivityManager.getNetworkInfo",
+  "java.net.URL.<init>",
+  "java.net.URL.getHost",
+  "java.net.URL.openConnection",
+  "java.net.URLConnection.setRequestProperty",
+  "java.net.HttpURLConnection.setRequestMethod",
+  "java.lang.Runtime.exec",
+  "java.lang.reflect.AccessibleObject.setAccessible",
+  "java.lang.reflect.Field.get",
+  "java.lang.Class.forName",
+  "java.lang.Class.getMethod",
+  "java.lang.ClassLoader.loadClass",
+  "javax.crypto.Cipher.getInstance",
+  "javax.crypto.Cipher.doFinal",
+  "javax.crypto.spec.SecretKeySpec.<init>",
+  "java.security.MessageDigest.getInstance",
+  "android.util.Base64.decode",
+  "android.content.pm.PackageManager.getPackageInfo",
+  "android.content.pm.PackageManager.getApplicationInfo",
+  "android.content.pm.PackageManager.hasSystemFeature",
+  "android.content.pm.PackageManager.getActivityInfo",
+  "android.content.pm.PackageManager.checkPermission",
+  "android.content.pm.PackageManager.resolveActivity",
+  "android.content.pm.PackageManager.getInstallerPackageName",
+  "android.provider.Settings$Secure.getString",
+  "java.io.File.exists",
+  "java.io.File.mkdir",
+  "java.io.File.delete",
+  "java.io.File.getParentFile",
+  "java.io.FileOutputStream.<init>",
+  "java.io.FileInputStream.<init>",
+  "android.os.Environment.getExternalStorageDirectory",
+  "android.content.ContextWrapper.registerReceiver",
+  "android.content.ContextWrapper.bindService",
+  "android.content.ContextWrapper.startService",
+  "android.webkit.WebView.loadUrl",
+  "android.webkit.WebSettings.setJavaScriptEnabled",
+  "android.webkit.WebSettings.setAllowFileAccess",
+  "android.webkit.WebView.setWebViewClient"
+ ],
+ "max_len": 64,
+ "min_len": 5,
+ "emb": 16,
+ "hidden": 32,
+ "dropout": 0.3,
+ "trained_at": "2026-11-07T10:15:40.106621",
+ "training_data": {
+  "source": "AndroCT emulator traces, 2018 + 2019 (benign/malware balanced within each year)",
+  "apps": 1098,
+  "rules": "first 500 framework calls per app; monitored APIs only; <=64 calls; >=5 calls; near-duplicate groups kept together in splits"
+ },
+ "evaluation": {
+  "note": "Balanced accuracy (50% = chance), from train_lstm.py with group-aware folds and cross-year tests",
+  "group_aware_cv": {
+   "lstm": 83.5,
+   "lstm_std": 8.7,
+   "count_baseline": 88.0,
+   "baseline_std": 8.8
+  },
+  "cross_year": {
+   "2018_to_2019": {
+    "lstm": 68.9,
+    "baseline": 70.3
+   },
+   "2019_to_2018": {
+    "lstm": 70.0,
+    "baseline": 83.4
+   }
+  },
+  "order_test": {
+   "lstm_real_order": 83.5,
+   "lstm_shuffled_order": 83.0
+  },
+  "limitation": "Order of calls added no measurable information; the simple count model scored higher. Treat the score as weak supporting evidence."
+ }
+}

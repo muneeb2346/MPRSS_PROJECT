@@ -1,0 +1,7 @@
+{
+  "total_samples": 177765,
+  "total_features": 67,
+  "numeric_features": 67,
+  "categorical_features": 0,
+  "label_column": "label"
+}
