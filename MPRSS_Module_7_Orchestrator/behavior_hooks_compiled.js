@@ -1,5 +1,5 @@
 📦
-446739 /behavior_hooks.js
+450764 /behavior_hooks.js
 ✄
 var __defProp = Object.defineProperty;
 var __export = (target, all) => {
@@ -592,11 +592,11 @@ Buffer2.prototype.equals = function equals(b) {
   return Buffer2.compare(this, b) === 0;
 };
 Buffer2.prototype.inspect = function inspect() {
-  let str = "";
+  let str2 = "";
   const max = config.INSPECT_MAX_BYTES;
-  str = this.toString("hex", 0, max).replace(/(.{2})/g, "$1 ").trim();
-  if (this.length > max) str += " ... ";
-  return "<Buffer " + str + ">";
+  str2 = this.toString("hex", 0, max).replace(/(.{2})/g, "$1 ").trim();
+  if (this.length > max) str2 += " ... ";
+  return "<Buffer " + str2 + ">";
 };
 Buffer2.prototype[Symbol.for("nodejs.util.inspect.custom")] = Buffer2.prototype.inspect;
 Buffer2.prototype.compare = function compare2(target, start, end, thisStart, thisEnd) {
@@ -1547,8 +1547,8 @@ E(
 );
 E(
   "ERR_OUT_OF_RANGE",
-  function(str, range, input) {
-    let msg = `The value of "${str}" is out of range.`;
+  function(str2, range, input) {
+    let msg = `The value of "${str2}" is out of range.`;
     let received = input;
     if (Number.isInteger(input) && Math.abs(input) > 2 ** 32) {
       received = addNumericalSeparator(String(input));
@@ -1616,14 +1616,14 @@ function boundsError(value, length, type) {
   );
 }
 var INVALID_BASE64_RE = /[^+/0-9A-Za-z-_]/g;
-function base64clean(str) {
-  str = str.split("=")[0];
-  str = str.trim().replace(INVALID_BASE64_RE, "");
-  if (str.length < 2) return "";
-  while (str.length % 4 !== 0) {
-    str = str + "=";
+function base64clean(str2) {
+  str2 = str2.split("=")[0];
+  str2 = str2.trim().replace(INVALID_BASE64_RE, "");
+  if (str2.length < 2) return "";
+  while (str2.length % 4 !== 0) {
+    str2 = str2 + "=";
   }
-  return str;
+  return str2;
 }
 function utf8ToBytes(string, units) {
   units = units || Infinity;
@@ -1685,19 +1685,19 @@ function utf8ToBytes(string, units) {
   }
   return bytes;
 }
-function asciiToBytes(str) {
+function asciiToBytes(str2) {
   const byteArray = [];
-  for (let i = 0; i < str.length; ++i) {
-    byteArray.push(str.charCodeAt(i) & 255);
+  for (let i = 0; i < str2.length; ++i) {
+    byteArray.push(str2.charCodeAt(i) & 255);
   }
   return byteArray;
 }
-function utf16leToBytes(str, units) {
+function utf16leToBytes(str2, units) {
   let c, hi, lo;
   const byteArray = [];
-  for (let i = 0; i < str.length; ++i) {
+  for (let i = 0; i < str2.length; ++i) {
     if ((units -= 2) < 0) break;
-    c = str.charCodeAt(i);
+    c = str2.charCodeAt(i);
     hi = c >> 8;
     lo = c % 256;
     byteArray.push(lo);
@@ -1705,8 +1705,8 @@ function utf16leToBytes(str, units) {
   }
   return byteArray;
 }
-function base64ToBytes(str) {
-  return toByteArray(base64clean(str));
+function base64ToBytes(str2) {
+  return toByteArray(base64clean(str2));
 }
 function blitBuffer(src, dst, offset, length) {
   let i;
@@ -1728,7 +1728,7 @@ var hexSliceLookupTable = function() {
   return table;
 }();
 
-// ../../../node_modules/frida-java-bridge/lib/android.js
+// ../../../../node_modules/frida-java-bridge/lib/android.js
 var android_exports = {};
 __export(android_exports, {
   ArtMethod: () => ArtMethod,
@@ -1760,7 +1760,7 @@ __export(android_exports, {
   withRunnableArtThread: () => withRunnableArtThread
 });
 
-// ../../../node_modules/frida-java-bridge/lib/alloc.js
+// ../../../../node_modules/frida-java-bridge/lib/alloc.js
 var {
   pageSize,
   pointerSize
@@ -1825,7 +1825,7 @@ function makeAllocator(sliceSize) {
   return new CodeAllocator(sliceSize);
 }
 
-// ../../../node_modules/frida-java-bridge/lib/result.js
+// ../../../../node_modules/frida-java-bridge/lib/result.js
 var JNI_OK = 0;
 function checkJniResult(name, result) {
   if (result !== JNI_OK) {
@@ -1833,7 +1833,7 @@ function checkJniResult(name, result) {
   }
 }
 
-// ../../../node_modules/frida-java-bridge/lib/jvmti.js
+// ../../../../node_modules/frida-java-bridge/lib/jvmti.js
 var jvmtiVersion = {
   v1_0: 805371904,
   v1_2: 805372416
@@ -1880,7 +1880,7 @@ function proxy(offset, retType, argTypes, wrapper) {
   };
 }
 
-// ../../../node_modules/frida-java-bridge/lib/machine-code.js
+// ../../../../node_modules/frida-java-bridge/lib/machine-code.js
 function parseInstructionsAt(address, tryParse, { limit }) {
   let cursor = address;
   let prevInsn = null;
@@ -1896,7 +1896,7 @@ function parseInstructionsAt(address, tryParse, { limit }) {
   return null;
 }
 
-// ../../../node_modules/frida-java-bridge/lib/memoize.js
+// ../../../../node_modules/frida-java-bridge/lib/memoize.js
 function memoize(compute) {
   let value = null;
   let computed = false;
@@ -1909,7 +1909,7 @@ function memoize(compute) {
   };
 }
 
-// ../../../node_modules/frida-java-bridge/lib/env.js
+// ../../../../node_modules/frida-java-bridge/lib/env.js
 function Env(handle, vm3) {
   this.handle = handle;
   this.vm = vm3;
@@ -2202,24 +2202,24 @@ Env.prototype.getStaticFieldId = proxy2(144, "pointer", ["pointer", "pointer", "
 Env.prototype.getStaticIntField = proxy2(150, "int32", ["pointer", "pointer", "pointer"], function(impl, obj, fieldId) {
   return impl(this.handle, obj, fieldId);
 });
-Env.prototype.getStringLength = proxy2(164, "int32", ["pointer", "pointer"], function(impl, str) {
-  return impl(this.handle, str);
+Env.prototype.getStringLength = proxy2(164, "int32", ["pointer", "pointer"], function(impl, str2) {
+  return impl(this.handle, str2);
 });
-Env.prototype.getStringChars = proxy2(165, "pointer", ["pointer", "pointer", "pointer"], function(impl, str) {
-  return impl(this.handle, str, NULL);
+Env.prototype.getStringChars = proxy2(165, "pointer", ["pointer", "pointer", "pointer"], function(impl, str2) {
+  return impl(this.handle, str2, NULL);
 });
-Env.prototype.releaseStringChars = proxy2(166, "void", ["pointer", "pointer", "pointer"], function(impl, str, utf) {
-  impl(this.handle, str, utf);
+Env.prototype.releaseStringChars = proxy2(166, "void", ["pointer", "pointer", "pointer"], function(impl, str2, utf) {
+  impl(this.handle, str2, utf);
 });
-Env.prototype.newStringUtf = proxy2(167, "pointer", ["pointer", "pointer"], function(impl, str) {
-  const utf = Memory.allocUtf8String(str);
+Env.prototype.newStringUtf = proxy2(167, "pointer", ["pointer", "pointer"], function(impl, str2) {
+  const utf = Memory.allocUtf8String(str2);
   return impl(this.handle, utf);
 });
-Env.prototype.getStringUtfChars = proxy2(169, "pointer", ["pointer", "pointer", "pointer"], function(impl, str) {
-  return impl(this.handle, str, NULL);
+Env.prototype.getStringUtfChars = proxy2(169, "pointer", ["pointer", "pointer", "pointer"], function(impl, str2) {
+  return impl(this.handle, str2, NULL);
 });
-Env.prototype.releaseStringUtfChars = proxy2(170, "void", ["pointer", "pointer", "pointer"], function(impl, str, utf) {
-  impl(this.handle, str, utf);
+Env.prototype.releaseStringUtfChars = proxy2(170, "void", ["pointer", "pointer", "pointer"], function(impl, str2, utf) {
+  impl(this.handle, str2, utf);
 });
 Env.prototype.getArrayLength = proxy2(171, "int32", ["pointer", "pointer"], function(impl, array) {
   return impl(this.handle, array);
@@ -2706,20 +2706,20 @@ Env.prototype.getArrayTypeName = function(type) {
     return "[Ljava.lang.Object;";
   }
 };
-Env.prototype.stringFromJni = function(str) {
-  const utf = this.getStringChars(str);
+Env.prototype.stringFromJni = function(str2) {
+  const utf = this.getStringChars(str2);
   if (utf.isNull()) {
     throw new Error("Unable to access string");
   }
   try {
-    const length = this.getStringLength(str);
+    const length = this.getStringLength(str2);
     return utf.readUtf16String(length);
   } finally {
-    this.releaseStringChars(str, utf);
+    this.releaseStringChars(str2, utf);
   }
 };
 
-// ../../../node_modules/frida-java-bridge/lib/vm.js
+// ../../../../node_modules/frida-java-bridge/lib/vm.js
 var JNI_VERSION_1_6 = 65542;
 var pointerSize4 = Process.pointerSize;
 var jsThreadID = Process.getCurrentThreadId();
@@ -2857,7 +2857,7 @@ VM.dispose = function(vm3) {
   }
 };
 
-// ../../../node_modules/frida-java-bridge/lib/android.js
+// ../../../../node_modules/frida-java-bridge/lib/android.js
 var jsizeSize = 4;
 var pointerSize5 = Process.pointerSize;
 var {
@@ -7001,9 +7001,9 @@ var StdString = class {
     return data.readUtf8String();
   }
   _getData() {
-    const str = this.handle;
-    const isTiny = (str.readU8() & 1) === 0;
-    const data = isTiny ? str.add(1) : str.add(2 * pointerSize5).readPointer();
+    const str2 = this.handle;
+    const isTiny = (str2.readU8() & 1) === 0;
+    const data = isTiny ? str2.add(1) : str2.add(2 * pointerSize5).readPointer();
     return [data, isTiny];
   }
 };
@@ -7293,7 +7293,7 @@ function alignPointerOffset(offset) {
   return offset;
 }
 
-// ../../../node_modules/frida-java-bridge/lib/jvm.js
+// ../../../../node_modules/frida-java-bridge/lib/jvm.js
 var jsizeSize2 = 4;
 var { pointerSize: pointerSize6 } = Process;
 var JVM_ACC_NATIVE = 256;
@@ -8091,7 +8091,7 @@ function parseX64VTableOffset(insn) {
   return defaultVtableIndicesOffset + 16;
 }
 
-// ../../../node_modules/frida-java-bridge/lib/api.js
+// ../../../../node_modules/frida-java-bridge/lib/api.js
 var getApi3 = getApi;
 try {
   getAndroidVersion();
@@ -8100,7 +8100,7 @@ try {
 }
 var api_default = getApi3;
 
-// ../../../node_modules/frida-java-bridge/lib/class-model.js
+// ../../../../node_modules/frida-java-bridge/lib/class-model.js
 var code2 = `#include <json-glib/json-glib.h>
 #include <string.h>
 
@@ -9397,11 +9397,11 @@ var Model = class _Model {
     return cm.find(this.handle, Memory.allocUtf8String(member)).readUtf8String();
   }
   list() {
-    const str = cm.list(this.handle);
+    const str2 = cm.list(this.handle);
     try {
-      return JSON.parse(str.readUtf8String());
+      return JSON.parse(str2.readUtf8String());
     } finally {
-      cm.dealloc(str);
+      cm.dealloc(str2);
     }
   }
 };
@@ -9529,7 +9529,7 @@ function boolToNative(val) {
   return val ? 1 : 0;
 }
 
-// ../../../node_modules/frida-java-bridge/lib/lru.js
+// ../../../../node_modules/frida-java-bridge/lib/lru.js
 var LRU = class {
   constructor(capacity, destroy) {
     this.items = /* @__PURE__ */ new Map();
@@ -9568,7 +9568,7 @@ var LRU = class {
   }
 };
 
-// ../../../node_modules/frida-java-bridge/lib/mkdex.js
+// ../../../../node_modules/frida-java-bridge/lib/mkdex.js
 var kAccPublic2 = 1;
 var kAccNative2 = 256;
 var kAccConstructor = 65536;
@@ -9694,10 +9694,10 @@ var DexBuilder = class {
       return paramOffset;
     });
     const stringChunks = [];
-    const stringOffsets = strings.map((str) => {
+    const stringOffsets = strings.map((str2) => {
       const strOffset = offset;
-      const header = Buffer2.from(createUleb128(str.length));
-      const data = Buffer2.from(str, "utf8");
+      const header = Buffer2.from(createUleb128(str2.length));
+      const data = Buffer2.from(str2, "utf8");
       const chunk = Buffer2.concat([header, data, kNullTerminator]);
       stringChunks.push(chunk);
       offset += chunk.length;
@@ -10303,7 +10303,7 @@ function adler32(buffer, offset) {
 }
 var mkdex_default = mkdex;
 
-// ../../../node_modules/frida-java-bridge/lib/types.js
+// ../../../../node_modules/frida-java-bridge/lib/types.js
 var JNILocalRefType = 1;
 var vm = null;
 var primitiveArrayHandler = null;
@@ -10991,14 +10991,14 @@ Object.defineProperties(PrimitiveArray.prototype, {
 function makeJniObjectTypeName(typeName) {
   return "L" + typeName.replace(/\./g, "/") + ";";
 }
-function toTitleCase(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+function toTitleCase(str2) {
+  return str2.charAt(0).toUpperCase() + str2.slice(1);
 }
 function identity(value) {
   return value;
 }
 
-// ../../../node_modules/frida-java-bridge/lib/class-factory.js
+// ../../../../node_modules/frida-java-bridge/lib/class-factory.js
 var jsizeSize3 = 4;
 var {
   ensureClassInitialized: ensureClassInitialized3,
@@ -13012,7 +13012,7 @@ function makeSourceFileName(className) {
   return tokens[tokens.length - 1] + ".java";
 }
 
-// ../../../node_modules/frida-java-bridge/index.js
+// ../../../../node_modules/frida-java-bridge/index.js
 var jsizeSize4 = 4;
 var pointerSize8 = Process.pointerSize;
 var Runtime = class {
@@ -13495,32 +13495,248 @@ Script.bindWeak(runtime, () => {
 var frida_java_bridge_default = runtime;
 
 // behavior_hooks.js
-console.log("[behavior_hooks] Script loaded, checking for Java...");
-function safeStr(x) {
+var CALLER_FILTER = true;
+var DEBUG_STACK = false;
+var MAX_VOCAB_EVENTS = 300;
+var MAX_ALERT_EVENTS = 200;
+var VOCAB_TOKENS = [
+  ["android.telephony.TelephonyManager.getNetworkOperator", "telephony"],
+  ["android.telephony.TelephonyManager.getSimOperator", "telephony"],
+  ["android.telephony.TelephonyManager.getSimCountryIso", "telephony"],
+  ["android.telephony.TelephonyManager.getNetworkCountryIso", "telephony"],
+  ["android.telephony.TelephonyManager.listen", "telephony"],
+  ["android.net.ConnectivityManager.getActiveNetworkInfo", "network"],
+  ["android.net.ConnectivityManager.getNetworkInfo", "network"],
+  ["java.net.URL.<init>", "network"],
+  ["java.net.URL.getHost", "network"],
+  ["java.net.URL.openConnection", "network"],
+  ["java.net.URLConnection.setRequestProperty", "network"],
+  ["java.net.HttpURLConnection.setRequestMethod", "network"],
+  ["java.lang.Runtime.exec", "command_exec"],
+  ["java.lang.reflect.AccessibleObject.setAccessible", "reflection"],
+  ["java.lang.reflect.Field.get", "reflection"],
+  ["java.lang.Class.forName", "reflection"],
+  ["java.lang.Class.getMethod", "reflection"],
+  ["javax.crypto.Cipher.getInstance", "crypto"],
+  ["javax.crypto.Cipher.doFinal", "crypto"],
+  ["javax.crypto.spec.SecretKeySpec.<init>", "crypto"],
+  ["java.security.MessageDigest.getInstance", "crypto"],
+  ["android.util.Base64.decode", "crypto"],
+  ["android.content.pm.PackageManager.getPackageInfo", "package_info"],
+  ["android.content.pm.PackageManager.getApplicationInfo", "package_info"],
+  ["android.content.pm.PackageManager.hasSystemFeature", "package_info"],
+  ["android.content.pm.PackageManager.getActivityInfo", "package_info"],
+  ["android.content.pm.PackageManager.checkPermission", "package_info"],
+  ["android.content.pm.PackageManager.resolveActivity", "package_info"],
+  ["android.content.pm.PackageManager.getInstallerPackageName", "package_info"],
+  ["android.provider.Settings$Secure.getString", "package_info"],
+  ["java.io.File.exists", "file_io"],
+  ["java.io.File.mkdir", "file_io"],
+  ["java.io.File.delete", "file_io"],
+  ["java.io.File.getParentFile", "file_io"],
+  ["java.io.FileOutputStream.<init>", "file_io"],
+  ["java.io.FileInputStream.<init>", "file_io"],
+  ["android.os.Environment.getExternalStorageDirectory", "file_io"],
+  ["android.content.ContextWrapper.registerReceiver", "component"],
+  ["android.content.ContextWrapper.bindService", "component"],
+  ["android.content.ContextWrapper.startService", "component"],
+  ["android.webkit.WebView.loadUrl", "webview"],
+  ["android.webkit.WebSettings.setJavaScriptEnabled", "webview"],
+  ["android.webkit.WebSettings.setAllowFileAccess", "webview"],
+  ["android.webkit.WebView.setWebViewClient", "webview"]
+];
+var ALERT_TOKENS = [
+  ["android.telephony.SmsManager.sendTextMessage", "sms"],
+  ["android.telephony.SmsManager.sendMultipartTextMessage", "sms"],
+  ["android.telephony.TelephonyManager.getDeviceId", "telephony"],
+  ["android.telephony.TelephonyManager.getSubscriberId", "telephony"],
+  ["android.telephony.TelephonyManager.getSimSerialNumber", "telephony"],
+  ["android.telephony.TelephonyManager.getLine1Number", "telephony"],
+  ["android.location.LocationManager.getLastKnownLocation", "location"],
+  ["android.hardware.Camera.open", "camera"],
+  ["android.hardware.camera2.CameraManager.openCamera", "camera"],
+  ["android.content.ContentResolver.query", "content_query"],
+  ["dalvik.system.DexClassLoader.<init>", "dynamic_loading"]
+];
+var OKHTTP = [
+  "com.android.okhttp.internal.huc.HttpURLConnectionImpl",
+  "com.android.okhttp.internal.huc.HttpsURLConnectionImpl"
+];
+var HOOK_ON = {
+  // PackageManager is abstract: the app talks to ApplicationPackageManager
+  "android.content.pm.PackageManager": {
+    hook: ["android.app.ApplicationPackageManager"],
+    skip: ["android.content.pm.PackageManager", "android.app.ApplicationPackageManager"]
+  },
+  // URL.openConnection() really returns okhttp's implementation classes on Android
+  "java.net.URLConnection": {
+    hook: ["java.net.URLConnection"].concat(OKHTTP),
+    skip: ["java.net.URLConnection", "java.net.HttpURLConnection"].concat(OKHTTP)
+  },
+  "java.net.HttpURLConnection": {
+    hook: ["java.net.HttpURLConnection"].concat(OKHTTP),
+    skip: ["java.net.URLConnection", "java.net.HttpURLConnection"].concat(OKHTTP)
+  }
+};
+var FRAMEWORK_PREFIXES = [
+  "java.",
+  "javax.",
+  "android.",
+  "dalvik.",
+  "com.android.",
+  "libcore.",
+  "sun.",
+  "org.apache.harmony.",
+  "org.json.",
+  "org.xmlpull.",
+  "org.w3c.",
+  "org.xml."
+];
+var APP_SIDE_PREFIXES = ["android.support.", "android.arch.", "android.databinding."];
+function startsWithAny(name, prefixes) {
+  for (var i = 0; i < prefixes.length; i++) {
+    if (name.indexOf(prefixes[i]) === 0) return true;
+  }
+  return false;
+}
+function isFrameworkClass(name) {
+  if (startsWithAny(name, APP_SIDE_PREFIXES)) return false;
+  return startsWithAny(name, FRAMEWORK_PREFIXES);
+}
+function str(x) {
   try {
-    if (x === null || x === void 0) return String(x);
-    return x.toString();
+    if (x === null || x === void 0) return "";
+    var s = String(x);
+    return s.length > 150 ? s.substring(0, 150) : s;
   } catch (e) {
-    return "<unstringifiable>";
+    return "";
   }
 }
 function report(category, api2, detail) {
-  send({
-    ts: Date.now(),
-    category,
-    api: api2,
-    detail,
-    pid: Process.id
+  send({ ts: Date.now(), category, api: api2, detail: detail || "", pid: Process.id });
+}
+var DETAIL = {
+  "java.lang.Runtime.exec": function(t, a) {
+    return str(a[0]);
+  },
+  "java.net.URL.openConnection": function(t, a) {
+    return str(t);
+  },
+  "java.net.URL.<init>": function(t, a) {
+    return typeof a[0] === "string" ? str(a[0]) : "";
+  },
+  "java.io.FileOutputStream.<init>": function(t, a) {
+    return str(a[0]);
+  },
+  "java.io.FileInputStream.<init>": function(t, a) {
+    return str(a[0]);
+  },
+  "android.webkit.WebView.loadUrl": function(t, a) {
+    return str(a[0]);
+  },
+  "android.provider.Settings$Secure.getString": function(t, a) {
+    return str(a[1]);
+  },
+  "android.telephony.SmsManager.sendTextMessage": function(t, a) {
+    return "to=" + str(a[0]);
+  },
+  "android.location.LocationManager.getLastKnownLocation": function(t, a) {
+    return "provider=" + str(a[0]);
+  },
+  "android.content.ContentResolver.query": function(t, a) {
+    var u = str(a[0]);
+    var kind = "content";
+    if (u.indexOf("contacts") !== -1) kind = "contacts";
+    else if (u.indexOf("sms") !== -1) kind = "sms";
+    else if (u.indexOf("call_log") !== -1 || u.indexOf("calls") !== -1) kind = "call_log";
+    return kind + ":" + u;
+  }
+};
+var vocabCount = 0;
+var alertCount = 0;
+var stackDebugShown = 0;
+var Exception = null;
+function immediateCaller(skipClasses, methodName) {
+  var st = Exception.$new().getStackTrace();
+  var n = st.length;
+  var h = -1;
+  for (var i = 0; i < n && i < 12; i++) {
+    if (skipClasses.indexOf(st[i].getClassName()) !== -1 && st[i].getMethodName() === methodName) {
+      h = i;
+      break;
+    }
+  }
+  var j = h === -1 ? 0 : h;
+  while (j < n && skipClasses.indexOf(st[j].getClassName()) !== -1 && st[j].getMethodName() === methodName) j++;
+  if (DEBUG_STACK && stackDebugShown < 5) {
+    stackDebugShown++;
+    var lines = [];
+    for (var k = 0; k < n && k < 6; k++) lines.push("    " + st[k].getClassName() + "." + st[k].getMethodName());
+    console.log("[stack for " + skipClasses[0] + "." + methodName + "] hooked frame index=" + h + "\n" + lines.join("\n"));
+  }
+  return j < n ? st[j].getClassName() : null;
+}
+function onCall(spec, thisObj, args) {
+  if (spec.alert) {
+    if (alertCount >= MAX_ALERT_EVENTS) return;
+    alertCount++;
+    var ad = DETAIL[spec.token];
+    report(spec.category, spec.token, ad ? ad(thisObj, args) : "");
+    return;
+  }
+  if (vocabCount >= MAX_VOCAB_EVENTS) return;
+  if (CALLER_FILTER) {
+    var caller = immediateCaller(spec.skip, spec.method);
+    if (caller === null || isFrameworkClass(caller)) return;
+  }
+  vocabCount++;
+  var d = DETAIL[spec.token];
+  report(spec.category, spec.token, d ? d(thisObj, args) : "");
+}
+function hookMethod(className, methodName, spec) {
+  var C = frida_java_bridge_default.use(className);
+  var key = methodName === "<init>" ? "$init" : methodName;
+  var m = C[key];
+  if (m === void 0 || m === null) throw new Error("method not found");
+  var overloads = m.overloads;
+  overloads.forEach(function(ov) {
+    ov.implementation = function() {
+      try {
+        onCall(spec, this, arguments);
+      } catch (e) {
+      }
+      return ov.apply(this, arguments);
+    };
   });
+  return overloads.length;
+}
+function install(token, category, isAlert, status) {
+  var dot = token.lastIndexOf(".");
+  var cls = token.substring(0, dot);
+  var method = token.substring(dot + 1);
+  var plan = HOOK_ON[cls] || { hook: [cls], skip: [cls] };
+  var spec = { token, category, alert: isAlert, method, skip: plan.skip };
+  var hooked = 0;
+  var reasons = [];
+  plan.hook.forEach(function(hc) {
+    try {
+      hooked += hookMethod(hc, method, spec);
+    } catch (e) {
+      reasons.push(hc + ": " + e);
+    }
+  });
+  if (hooked > 0) {
+    (isAlert ? status.alerts_installed : status.installed).push(token);
+    if (reasons.length > 0) status.partial.push({ token, reasons });
+  } else {
+    status.failed.push({ token, reason: reasons.join(" | ") });
+  }
 }
 var waitAttempts = 0;
 function waitForJava(callback) {
   waitAttempts++;
-  if (waitAttempts % 20 === 0) {
-    console.log("[behavior_hooks] Still waiting for Java... attempt " + waitAttempts + " (Java defined: " + (typeof frida_java_bridge_default !== "undefined") + ")");
-  }
+  if (waitAttempts % 20 === 0) console.log("[behavior_hooks] Still waiting for Java... attempt " + waitAttempts);
   if (typeof frida_java_bridge_default !== "undefined" && frida_java_bridge_default.available) {
-    console.log("[behavior_hooks] Java is now available!");
     callback();
   } else {
     setTimeout(function() {
@@ -13531,127 +13747,25 @@ function waitForJava(callback) {
 waitForJava(function() {
   try {
     frida_java_bridge_default.perform(function() {
-      try {
-        var ContextImpl = frida_java_bridge_default.use("android.app.ContextImpl");
-        ContextImpl.checkSelfPermission.overload("java.lang.String").implementation = function(perm) {
-          report("permission", "Context.checkSelfPermission", perm);
-          return this.checkSelfPermission(perm);
-        };
-      } catch (e) {
-        console.log("[hook skip] checkSelfPermission: " + e);
-      }
-      try {
-        var SmsManager = frida_java_bridge_default.use("android.telephony.SmsManager");
-        SmsManager.sendTextMessage.overload(
-          "java.lang.String",
-          "java.lang.String",
-          "java.lang.String",
-          "android.app.PendingIntent",
-          "android.app.PendingIntent"
-        ).implementation = function(dest, sc, text, sentIntent, deliveryIntent) {
-          report("sms", "SmsManager.sendTextMessage", "to=" + safeStr(dest));
-          return this.sendTextMessage(dest, sc, text, sentIntent, deliveryIntent);
-        };
-      } catch (e) {
-        console.log("[hook skip] SmsManager.sendTextMessage: " + e);
-      }
-      try {
-        var ContentResolver = frida_java_bridge_default.use("android.content.ContentResolver");
-        ContentResolver.query.overload(
-          "android.net.Uri",
-          "[Ljava.lang.String;",
-          "java.lang.String",
-          "[Ljava.lang.String;",
-          "java.lang.String"
-        ).implementation = function(uri, projection, selection, selArgs, sortOrder) {
-          var uriStr = safeStr(uri);
-          var kind = "content";
-          if (uriStr.indexOf("contacts") !== -1) kind = "contacts";
-          else if (uriStr.indexOf("sms") !== -1) kind = "sms";
-          else if (uriStr.indexOf("call_log") !== -1 || uriStr.indexOf("calls") !== -1) kind = "call_log";
-          report("content_query", "ContentResolver.query[" + kind + "]", uriStr);
-          return this.query(uri, projection, selection, selArgs, sortOrder);
-        };
-      } catch (e) {
-        console.log("[hook skip] ContentResolver.query: " + e);
-      }
-      try {
-        var Camera = frida_java_bridge_default.use("android.hardware.Camera");
-        Camera.open.overload("int").implementation = function(id) {
-          report("camera", "Camera.open", "id=" + id);
-          return this.open(id);
-        };
-      } catch (e) {
-        console.log("[hook skip] Camera.open: " + e);
-      }
-      try {
-        var CameraManager = frida_java_bridge_default.use("android.hardware.camera2.CameraManager");
-        CameraManager.openCamera.overload(
-          "java.lang.String",
-          "android.hardware.camera2.CameraDevice$StateCallback",
-          "android.os.Handler"
-        ).implementation = function(id, cb, handler) {
-          report("camera", "CameraManager.openCamera", "id=" + safeStr(id));
-          return this.openCamera(id, cb, handler);
-        };
-      } catch (e) {
-        console.log("[hook skip] CameraManager.openCamera: " + e);
-      }
-      try {
-        var LocationManager = frida_java_bridge_default.use("android.location.LocationManager");
-        LocationManager.getLastKnownLocation.overload("java.lang.String").implementation = function(provider) {
-          report("location", "LocationManager.getLastKnownLocation", "provider=" + safeStr(provider));
-          return this.getLastKnownLocation(provider);
-        };
-      } catch (e) {
-        console.log("[hook skip] getLastKnownLocation: " + e);
-      }
-      try {
-        var TelephonyManager = frida_java_bridge_default.use("android.telephony.TelephonyManager");
-        ["getDeviceId", "getSubscriberId", "getSimSerialNumber", "getLine1Number", "getSimCountryIso"].forEach(function(m) {
-          try {
-            TelephonyManager[m].overload().implementation = function() {
-              var result = this[m]();
-              report("telephony", "TelephonyManager." + m, safeStr(result));
-              return result;
-            };
-          } catch (e) {
-            console.log("[hook skip] TelephonyManager." + m + ": " + e);
-          }
-        });
-      } catch (e) {
-        console.log("[hook skip] TelephonyManager class: " + e);
-      }
-      try {
-        var URL = frida_java_bridge_default.use("java.net.URL");
-        URL.openConnection.overload().implementation = function() {
-          report("network", "URL.openConnection", safeStr(this.toString()));
-          return this.openConnection();
-        };
-      } catch (e) {
-        console.log("[hook skip] URL.openConnection: " + e);
-      }
-      try {
-        var FileOutputStream = frida_java_bridge_default.use("java.io.FileOutputStream");
-        FileOutputStream.$init.overload("java.lang.String").implementation = function(path) {
-          report("file_io", "FileOutputStream.<init>", "path=" + safeStr(path));
-          return this.$init(path);
-        };
-      } catch (e) {
-        console.log("[hook skip] FileOutputStream: " + e);
-      }
-      try {
-        var Runtime2 = frida_java_bridge_default.use("java.lang.Runtime");
-        Runtime2.exec.overload("java.lang.String").implementation = function(cmd) {
-          report("command_exec", "Runtime.exec", safeStr(cmd));
-          return this.exec(cmd);
-        };
-      } catch (e) {
-        console.log("[hook skip] Runtime.exec: " + e);
-      }
-      console.log("[behavior_hooks] All hooks installed. Monitoring...");
+      Exception = frida_java_bridge_default.use("java.lang.Exception");
+      var status = {
+        type: "hook_status",
+        installed: [],
+        alerts_installed: [],
+        failed: [],
+        partial: [],
+        caller_filter: CALLER_FILTER
+      };
+      VOCAB_TOKENS.forEach(function(t) {
+        install(t[0], t[1], false, status);
+      });
+      ALERT_TOKENS.forEach(function(t) {
+        install(t[0], t[1], true, status);
+      });
+      console.log("[behavior_hooks] model APIs hooked: " + status.installed.length + "/" + VOCAB_TOKENS.length + ", alert APIs: " + status.alerts_installed.length + "/" + ALERT_TOKENS.length + ", failed: " + status.failed.length);
+      send(status);
     });
   } catch (outerErr) {
-    console.log("[behavior_hooks] FATAL: Java.perform itself threw: " + outerErr + "\n" + outerErr.stack);
+    console.log("[behavior_hooks] FATAL: " + outerErr + "\n" + outerErr.stack);
   }
 });

@@ -4,6 +4,8 @@
 # itself), then checked against sensitive_api_report.py. Edit freely: build_dataset.py reads
 # this file. Left OUT on purpose:
 #   - HOT APIs (FileOutputStream.write, File.<init>, Parcel.*): too many calls, costly to hook
+#   - ClassLoader.loadClass: Android also calls it on its own for every class it loads, so a live
+#     Frida hook would massively over-count it compared with the training traces
 #   - SMS / getDeviceId / getSubscriberId / Camera / Location: almost never appear in the
 #     training traces (<2% of apps), so a model cannot learn them. Frida still logs them and the
 #     dashboard shows them as raw alerts.
@@ -32,7 +34,6 @@ java.lang.reflect.AccessibleObject.setAccessible
 java.lang.reflect.Field.get
 java.lang.Class.forName
 java.lang.Class.getMethod
-java.lang.ClassLoader.loadClass
 
 # --- crypto / encoding
 javax.crypto.Cipher.getInstance

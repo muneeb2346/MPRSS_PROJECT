@@ -25,6 +25,34 @@ from behavior_model import SeqClassifier
 from train_lstm import train_model
 
 
+def read_json(path):
+    if not os.path.exists(path):
+        return None
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def build_evaluation(data_dir, vocab_size):
+    """The honest evaluation numbers, read from the files train_lstm.py saved (never typed by hand)."""
+    real = read_json(os.path.join(data_dir, "eval_real.json"))
+    shuffled = read_json(os.path.join(data_dir, "eval_shuffled.json"))
+    if real is None:
+        print("WARNING: no eval_real.json found - run 'python train_lstm.py' first so the evaluation is recorded.")
+        return {"note": "No evaluation recorded. Run train_lstm.py, then train_final.py again."}
+    if real["vocab_size"] != vocab_size:
+        print("WARNING: eval_real.json was made with a DIFFERENT vocabulary size - rerun train_lstm.py.")
+    ev = {
+        "note": "Balanced accuracy (50% = chance), from train_lstm.py with group-aware folds and cross-year tests",
+        "group_aware_cv": real["group_cv"],
+        "cross_year": real["cross_year"],
+        "limitation": "Compare the LSTM with the count baseline and with the shuffled-order run: if the LSTM does not "
+                      "beat them, call order adds no information. Treat the score as weak supporting evidence.",
+    }
+    if shuffled is not None:
+        ev["lstm_shuffled_order_group_cv"] = shuffled["group_cv"]["lstm"]
+    return ev
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default="logs/dataset_v1.npz")
@@ -67,14 +95,7 @@ def main():
             "apps": int(len(y)),
             "rules": "first 500 framework calls per app; monitored APIs only; <=64 calls; >=5 calls; near-duplicate groups kept together in splits",
         },
-        "evaluation": {
-            "note": "Balanced accuracy (50% = chance), from train_lstm.py with group-aware folds and cross-year tests",
-            "group_aware_cv": {"lstm": 83.5, "lstm_std": 8.7, "count_baseline": 88.0, "baseline_std": 8.8},
-            "cross_year": {"2018_to_2019": {"lstm": 68.9, "baseline": 70.3},
-                           "2019_to_2018": {"lstm": 70.0, "baseline": 83.4}},
-            "order_test": {"lstm_real_order": 83.5, "lstm_shuffled_order": 83.0},
-            "limitation": "Order of calls added no measurable information; the simple count model scored higher. Treat the score as weak supporting evidence.",
-        },
+        "evaluation": build_evaluation(os.path.dirname(args.data) or ".", V),
     }
     with open(os.path.join(args.models_dir, "behavior_meta.json"), "w", encoding="utf-8") as f:
         json.dump(meta, f, indent=1)

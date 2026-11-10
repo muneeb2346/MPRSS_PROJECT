@@ -16,6 +16,7 @@ The LSTM uses part of each TRAINING set (split by groups) to decide when to stop
 the test apps are never used for any decision.
 """
 
+import os
 import time
 import copy
 import argparse
@@ -153,13 +154,29 @@ def main():
 
     # ---- 2. cross-year ----
     print("\n2) CROSS-YEAR (train on one year, test on the other)")
+    cross_year = {}
     for tr_year, te_year in ((2018, 2019), (2019, 2018)):
         tr, te = year == tr_year, year == te_year
         b_pred, _ = fit_predict(B[tr], y[tr], B[te])
         model = train_model(X[tr], lengths[tr], y[tr], group[tr], V, args, device, seed=args.seed + 100)
         l_pred = predict(model, X[te], lengths[te], device)
-        print(f"   train {tr_year} -> test {te_year}: baseline {balanced_accuracy_score(y[te], b_pred) * 100:5.1f}%   "
-              f"LSTM {balanced_accuracy_score(y[te], l_pred) * 100:5.1f}%")
+        b_acc, l_acc = balanced_accuracy_score(y[te], b_pred) * 100, balanced_accuracy_score(y[te], l_pred) * 100
+        cross_year[f"{tr_year}_to_{te_year}"] = {"baseline": round(b_acc, 1), "lstm": round(l_acc, 1)}
+        print(f"   train {tr_year} -> test {te_year}: baseline {b_acc:5.1f}%   LSTM {l_acc:5.1f}%")
+
+    # saved so train_final.py can record the real numbers (never hand-typed)
+    results = {
+        "mode": "shuffled" if args.shuffle_order else "real",
+        "vocab_size": V,
+        "n_apps": int(len(y)),
+        "group_cv": {"baseline": round(float(np.mean(base_scores)) * 100, 1), "baseline_std": round(float(np.std(base_scores)) * 100, 1),
+                     "lstm": round(float(np.mean(lstm_scores)) * 100, 1), "lstm_std": round(float(np.std(lstm_scores)) * 100, 1)},
+        "cross_year": cross_year,
+    }
+    out_path = os.path.join(os.path.dirname(args.data) or ".", f"eval_{results['mode']}.json")
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=1)
+    print(f"\nResults saved to {out_path}")
 
     print(f"\nDone in {time.time() - t0:.0f}s.")
     print("Please send me everything printed above (as text).")
